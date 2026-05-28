@@ -1,59 +1,58 @@
 ```xml
 <mxfile host="app.diagrams.net">
-  <diagram id="diagramaclasses" name="Page-1">
-    <mxGraphModel dx="1050" dy="720" grid="1" gridSize="10" guides="1"
-      tooltips="1" connect="1" arrows="1" fold="1"
-      page="1" pageScale="1" pageWidth="827" pageHeight="1169"
-      math="0" shadow="0">
+  <diagram id="diagram1" name="Page-1">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1"
+      tooltips="1" connect="1" arrows="1" fold="1" page="1"
+      pageScale="1" pageWidth="827" pageHeight="1169">
 
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
 
-        <!-- USUARIO -->
+        <!-- Usuario -->
         <mxCell id="usuario"
-          value="Usuário"
-          style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;html=1;"
+          value="Usuario"
+          style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;html=1;"
           vertex="1"
           parent="1">
 
-          <mxGeometry x="260" y="120" width="200" height="180" as="geometry"/>
+          <mxGeometry x="280" y="100" width="220" height="180" as="geometry"/>
         </mxCell>
 
         <mxCell id="u1"
           value="- id : int"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="usuario">
 
-          <mxGeometry y="28" width="200" height="26" as="geometry"/>
+          <mxGeometry y="28" width="220" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="u2"
           value="- nome : string"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="usuario">
 
-          <mxGeometry y="54" width="200" height="26" as="geometry"/>
+          <mxGeometry y="54" width="220" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="u3"
           value="- email : string"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="usuario">
 
-          <mxGeometry y="80" width="200" height="26" as="geometry"/>
+          <mxGeometry y="80" width="220" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="u4"
           value="- telefone : string"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="usuario">
 
-          <mxGeometry y="106" width="200" height="26" as="geometry"/>
+          <mxGeometry y="106" width="220" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="u5"
@@ -61,26 +60,26 @@
           vertex="1"
           parent="usuario">
 
-          <mxGeometry y="132" width="200" height="8" as="geometry"/>
+          <mxGeometry y="132" width="220" height="8" as="geometry"/>
         </mxCell>
 
         <mxCell id="u6"
           value="+ acessarCatalogo()"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="usuario">
 
-          <mxGeometry y="140" width="200" height="26" as="geometry"/>
+          <mxGeometry y="140" width="220" height="26" as="geometry"/>
         </mxCell>
 
-        <!-- CLIENTE -->
+        <!-- Cliente -->
         <mxCell id="cliente"
           value="Cliente"
           style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;html=1;"
           vertex="1"
           parent="1">
 
-          <mxGeometry x="60" y="400" width="200" height="130" as="geometry"/>
+          <mxGeometry x="60" y="380" width="220" height="130" as="geometry"/>
         </mxCell>
 
         <mxCell id="c1"
@@ -88,49 +87,49 @@
           vertex="1"
           parent="cliente">
 
-          <mxGeometry y="28" width="200" height="8" as="geometry"/>
+          <mxGeometry y="28" width="220" height="8" as="geometry"/>
         </mxCell>
 
         <mxCell id="c2"
           value="+ comprarLivro()"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="cliente">
 
-          <mxGeometry y="36" width="200" height="26" as="geometry"/>
+          <mxGeometry y="36" width="220" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="c3"
           value="+ alugarLivro()"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="cliente">
 
-          <mxGeometry y="62" width="200" height="26" as="geometry"/>
+          <mxGeometry y="62" width="220" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="c4"
           value="+ devolverLivro()"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="cliente">
 
-          <mxGeometry y="88" width="200" height="26" as="geometry"/>
+          <mxGeometry y="88" width="220" height="26" as="geometry"/>
         </mxCell>
 
-        <!-- BIBLIOTECARIO -->
+        <!-- Bibliotecario -->
         <mxCell id="bibliotecario"
-          value="Bibliotecário"
+          value="Bibliotecario"
           style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;html=1;"
           vertex="1"
           parent="1">
 
-          <mxGeometry x="340" y="400" width="220" height="150" as="geometry"/>
+          <mxGeometry x="360" y="380" width="220" height="140" as="geometry"/>
         </mxCell>
 
         <mxCell id="b1"
           value="- senha : string"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="bibliotecario">
 
@@ -147,7 +146,7 @@
 
         <mxCell id="b3"
           value="+ editarInformacoes()"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="bibliotecario">
 
@@ -156,70 +155,70 @@
 
         <mxCell id="b4"
           value="+ acessarPendencias()"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="bibliotecario">
 
           <mxGeometry y="88" width="220" height="26" as="geometry"/>
         </mxCell>
 
-        <!-- LIVRO -->
+        <!-- Livro -->
         <mxCell id="livro"
           value="Livro"
           style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;html=1;"
           vertex="1"
           parent="1">
 
-          <mxGeometry x="650" y="170" width="220" height="190" as="geometry"/>
+          <mxGeometry x="680" y="150" width="240" height="190" as="geometry"/>
         </mxCell>
 
         <mxCell id="l1"
           value="- idLivro : int"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="livro">
 
-          <mxGeometry y="28" width="220" height="26" as="geometry"/>
+          <mxGeometry y="28" width="240" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="l2"
           value="- nome : string"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="livro">
 
-          <mxGeometry y="54" width="220" height="26" as="geometry"/>
+          <mxGeometry y="54" width="240" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="l3"
           value="- descricao : string"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="livro">
 
-          <mxGeometry y="80" width="220" height="26" as="geometry"/>
+          <mxGeometry y="80" width="240" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="l4"
           value="- preco : float"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="livro">
 
-          <mxGeometry y="106" width="220" height="26" as="geometry"/>
+          <mxGeometry y="106" width="240" height="26" as="geometry"/>
         </mxCell>
 
         <mxCell id="l5"
           value="- disponivel : boolean"
-          style="text;align=left;verticalAlign=middle;spacingLeft=4;html=1;"
+          style="text;align=left;spacingLeft=4;html=1;"
           vertex="1"
           parent="livro">
 
-          <mxGeometry y="132" width="220" height="26" as="geometry"/>
+          <mxGeometry y="132" width="240" height="26" as="geometry"/>
         </mxCell>
 
-        <!-- HERANÇA CLIENTE -->
-        <mxCell id="heranca1"
+        <!-- Heranca Cliente -->
+        <mxCell id="h1"
           style="endArrow=block;endFill=0;html=1;"
           edge="1"
           parent="1"
@@ -229,8 +228,8 @@
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- HERANÇA BIBLIOTECARIO -->
-        <mxCell id="heranca2"
+        <!-- Heranca Bibliotecario -->
+        <mxCell id="h2"
           style="endArrow=block;endFill=0;html=1;"
           edge="1"
           parent="1"
