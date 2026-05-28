@@ -66,7 +66,188 @@
           <mxGeometry height="104" width="150" x="520" y="243" as="geometry" />
         </mxCell>
         <mxCell id="x3oBKTVYSl1mSXtRR3mA-42" parent="x3oBKTVYSl1mSXtRR3mA-41" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+nome: varchar(60)" vertex="1">
-          <mxGeometry height="26" width="150" y="26" as="geometry" />
+          <mxGeometry height="26" width="150" y="26" as="geo```xml
+<mxfile host="app.diagrams.net">
+  <diagram id="biblioteca-refinada" name="DiagramaClasses">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1"
+      connect="1" arrows="1" fold="1" pageScale="1"
+      pageWidth="827" pageHeight="1169">
+
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- USUARIO -->
+        <mxCell id="usuario" value="Usuario"
+          style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;
+          startSize=28;resizeParent=1;rounded=0;"
+          vertex="1" parent="1">
+
+          <mxGeometry x="250" y="120" width="180" height="170" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="u1" value="-id : int"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="usuario">
+          <mxGeometry y="28" width="180" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="u2" value="-nome : string"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="usuario">
+          <mxGeometry y="54" width="180" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="u3" value="-email : string"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="usuario">
+          <mxGeometry y="80" width="180" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="u4" value="-telefone : string"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="usuario">
+          <mxGeometry y="106" width="180" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="u5"
+          style="line;strokeWidth=1;"
+          vertex="1" parent="usuario">
+          <mxGeometry y="132" width="180" height="8" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="u6" value="+acessarCatalogo()"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="usuario">
+          <mxGeometry y="140" width="180" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- CLIENTE -->
+        <mxCell id="cliente" value="Cliente"
+          style="swimlane;fontStyle=1;childLayout=stackLayout;
+          horizontal=1;startSize=28;"
+          vertex="1" parent="1">
+
+          <mxGeometry x="60" y="380" width="180" height="130" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c1"
+          style="line;strokeWidth=1;"
+          vertex="1" parent="cliente">
+          <mxGeometry y="28" width="180" height="8" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c2" value="+comprarLivro()"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="cliente">
+          <mxGeometry y="36" width="180" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c3" value="+alugarLivro()"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="cliente">
+          <mxGeometry y="62" width="180" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c4" value="+devolverLivro()"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="cliente">
+          <mxGeometry y="88" width="180" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- BIBLIOTECARIO -->
+        <mxCell id="bibliotecario" value="Bibliotecario"
+          style="swimlane;fontStyle=1;childLayout=stackLayout;
+          horizontal=1;startSize=28;"
+          vertex="1" parent="1">
+
+          <mxGeometry x="320" y="380" width="190" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b1" value="-senha : string"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="bibliotecario">
+          <mxGeometry y="28" width="190" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b2"
+          style="line;strokeWidth=1;"
+          vertex="1" parent="bibliotecario">
+          <mxGeometry y="54" width="190" height="8" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b3" value="+editarInformacoes()"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="bibliotecario">
+          <mxGeometry y="62" width="190" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b4" value="+acessarPendencias()"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="bibliotecario">
+          <mxGeometry y="88" width="190" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- LIVRO -->
+        <mxCell id="livro" value="Livro"
+          style="swimlane;fontStyle=1;childLayout=stackLayout;
+          horizontal=1;startSize=28;"
+          vertex="1" parent="1">
+
+          <mxGeometry x="610" y="180" width="190" height="180" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l1" value="-idLivro : int"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="livro">
+          <mxGeometry y="28" width="190" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l2" value="-nome : string"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="livro">
+          <mxGeometry y="54" width="190" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l3" value="-descricao : string"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="livro">
+          <mxGeometry y="80" width="190" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l4" value="-preco : float"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="livro">
+          <mxGeometry y="106" width="190" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="l5" value="-disponivel : boolean"
+          style="text;align=left;spacingLeft=4;"
+          vertex="1" parent="livro">
+          <mxGeometry y="132" width="190" height="26" as="geometry"/>
+        </mxCell>
+
+        <!-- HERANÇA -->
+        <mxCell id="h1"
+          style="endArrow=block;endFill=0;html=1;"
+          edge="1" parent="1"
+          source="cliente" target="usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="h2"
+          style="endArrow=block;endFill=0;html=1;"
+          edge="1" parent="1"
+          source="bibliotecario" target="usuario">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+```
+metry" />
         </mxCell>
         <mxCell id="x3oBKTVYSl1mSXtRR3mA-43" parent="x3oBKTVYSl1mSXtRR3mA-41" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+descricao: varchar(150)" vertex="1">
           <mxGeometry height="26" width="150" y="52" as="geometry" />
