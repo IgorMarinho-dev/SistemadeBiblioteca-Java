@@ -7,12 +7,14 @@ public class Exemplar {
     private String codigo;
     private StatusExemplar status;
     private Reserva reserva;
+    private Livro livro;
 
-    public Exemplar(int id, String codigo, Reserva reserva){
+    public Exemplar(int id, String codigo, Reserva reserva, Livro livro){
         this.id = id;
         this.codigo = codigo;
         this.status = StatusExemplar.DISPONIVEL;
         this.reserva = reserva;
+        this.livro = livro;
     }
 
     public int getId() {return id; }
@@ -26,6 +28,9 @@ public class Exemplar {
 
     public Reserva getReserva() { return reserva; }
     public void setReserva(Reserva reserva) { this.reserva = reserva; }
+
+    public Livro getLivro() { return livro; }
+    public void setLivro(Livro livro) { this.livro = livro; }
 
     public void marcarcomoemprestado() {
         this.status = StatusExemplar.EMPRESTADO;
