@@ -5,12 +5,14 @@ public class Livro {
     private String titulo;
     private Editora editora;
     private Autor autor;
+    private Categoria categoria;
 
-    public Livro(int id, String titulo, Editora editora,Autor autor) {
+    public Livro(int id, String titulo, Editora editora,Autor autor,Categoria categoria) {
         this.id = id;
         this.titulo = titulo;
         this.editora = editora;
-        this.autor = autor;}
+        this.autor = autor;
+        this.categoria = categoria;}
 
     public int getId() {
         return id;}
@@ -35,5 +37,11 @@ public class Livro {
 
     public void setAutor(Autor autor) {
         this.autor = autor;}
+
+    public Categoria getCategoria() {
+        return categoria;}
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;}
 
 }
