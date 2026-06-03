@@ -4,6 +4,7 @@ import model.interfaces.Notificavel;
 import exception.ReservaJaExistenteException;
 import exception.MultaEmAbertoException;
 import exception.LivroJaDevolvidoException;
+import exception.LimiteEmprestimosException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
@@ -75,10 +76,17 @@ public class Cliente extends Usuario implements Notificavel {
         System.out.println("Cliente comprando livro: " + titulo);
     }
 
-    public void alugarLivro(String titulo) {
+    public void alugarLivro(String titulo)
+            throws LimiteEmprestimosException {
+
+        if (historico.size() >= 5) {
+            throw new LimiteEmprestimosException(
+                    "O cliente atingiu o limite máximo de empréstimos."
+            );
+        }
+
         System.out.println("Cliente alugando livro: " + titulo);
     }
-
     public void devolverLivro(String titulo) throws LivroJaDevolvidoException {
         for (Emprestimo e : historico) {
             if (e.getDataDevolucaoReal() != null) {
