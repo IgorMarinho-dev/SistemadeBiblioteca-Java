@@ -3,6 +3,7 @@ package model;
 import model.interfaces.Notificavel;
 import exception.ReservaJaExistenteException;
 import exception.MultaEmAbertoException;
+import exception.LivroJaDevolvidoException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
@@ -78,7 +79,14 @@ public class Cliente extends Usuario implements Notificavel {
         System.out.println("Cliente alugando livro: " + titulo);
     }
 
-    public void devolverLivro(String titulo) {
+    public void devolverLivro(String titulo) throws LivroJaDevolvidoException {
+        for (Emprestimo e : historico) {
+            if (e.getDataDevolucaoReal() != null) {
+                throw new LivroJaDevolvidoException(
+                        "O livro '" + titulo + "' já foi devolvido."
+                );
+            }
+        }
         System.out.println("Cliente devolvendo livro: " + titulo);
     }
 
