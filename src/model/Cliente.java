@@ -20,15 +20,29 @@ public class Cliente extends Usuario implements Notificavel {
         this.historico = new ArrayList<>();
     }
 
-    public String getEndereco() { return endereco; }
-    public void setEndereco(String endereco) { this.endereco = endereco; }
+    public String getEndereco() {
+        return endereco;
+    }
 
-    public LocalDate getDataNascimento() { return dataNascimento; }
-    public void setDataNascimento(LocalDate dataNascimento) { this.dataNascimento = dataNascimento; }
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
 
-    public List<Reserva> getReservas() { return reservas; }
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
 
-    public List<Emprestimo> getHistorico() { return historico; }
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public List<Emprestimo> getHistorico() {
+        return historico;
+    }
 
     @Override
     public void acessarCatalogo() {
@@ -62,6 +76,13 @@ public class Cliente extends Usuario implements Notificavel {
     }
 
     public void reservarLivro(String titulo) throws ReservaJaExistenteException {
+
+        if (!reservas.isEmpty()) {
+            throw new ReservaJaExistenteException(
+                    "O cliente já possui uma reserva cadastrada."
+            );
+        }
+
         System.out.println("Cliente reservando livro: " + titulo);
     }
 }
