@@ -2,6 +2,7 @@ package model;
 
 import model.interfaces.Notificavel;
 import exception.ReservaJaExistenteException;
+import exception.MultaEmAbertoException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ public class Cliente extends Usuario implements Notificavel {
     private LocalDate dataNascimento;
     private List<Reserva> reservas;
     private List<Emprestimo> historico;
+    private List<Multa> multas;
 
     public Cliente(int id, String nome, String email, String telefone, String endereco, LocalDate dataNascimento) {
         super(id, nome, email, telefone);
@@ -18,6 +20,7 @@ public class Cliente extends Usuario implements Notificavel {
         this.dataNascimento = dataNascimento;
         this.reservas = new ArrayList<>();
         this.historico = new ArrayList<>();
+        this.multas = new ArrayList<>();
     }
 
     public String getEndereco() {
@@ -42,6 +45,14 @@ public class Cliente extends Usuario implements Notificavel {
 
     public List<Emprestimo> getHistorico() {
         return historico;
+    }
+
+    public List<Multa> getMultas() {
+        return multas;
+    }
+
+    public void adicionarMulta(Multa multa) {
+        multas.add(multa);
     }
 
     @Override
@@ -76,13 +87,22 @@ public class Cliente extends Usuario implements Notificavel {
     }
 
     public void reservarLivro(String titulo) throws ReservaJaExistenteException {
-
         if (!reservas.isEmpty()) {
             throw new ReservaJaExistenteException(
                     "O cliente já possui uma reserva cadastrada."
             );
         }
-
         System.out.println("Cliente reservando livro: " + titulo);
+    }
+
+    public void realizarEmprestimo(String titulo) throws MultaEmAbertoException {
+        for (Multa m : multas) {
+            if (!m.isPaga()) {
+                throw new MultaEmAbertoException(
+                        "O cliente possui multa em aberto. Quite o débito antes de realizar novos empréstimos."
+                );
+            }
+        }
+        System.out.println("Cliente realizando empréstimo: " + titulo);
     }
 }
