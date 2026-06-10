@@ -1,6 +1,6 @@
-# 📚 Sistema de Gerenciamento de Biblioteca
+# Sistema de Gerenciamento de Biblioteca
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 
 O Sistema de Gerenciamento de Biblioteca foi desenvolvido com o objetivo de auxiliar na administração de bibliotecas físicas, permitindo o controle de livros, exemplares, usuários, empréstimos, devoluções e reservas.
 
@@ -8,7 +8,7 @@ O sistema busca facilitar a organização do acervo e otimizar os processos de g
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Cadastro de livros
 - Gerenciamento de usuários
@@ -18,7 +18,7 @@ O sistema busca facilitar a organização do acervo e otimizar os processos de g
 
 ---
 
-## 📊 Diagrama de Classes
+## Diagrama de Classes
 
 O sistema possui as seguintes entidades principais:
 
@@ -30,7 +30,7 @@ O sistema possui as seguintes entidades principais:
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Java
 - UML
@@ -38,7 +38,7 @@ O sistema possui as seguintes entidades principais:
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```text
 src/
@@ -61,7 +61,7 @@ src/
     └── Main.java
 ```
 
-## ▶️ Como Executar
+## Como Executar
 
 1. Clone o repositório:
 
@@ -75,7 +75,7 @@ git clone https://github.com/seu-usuario/seu-repositorio.git
 
 ---
 
-## 🎓 Projeto Acadêmico
+## Projeto Acadêmico
 
 Desenvolvido para a disciplina de Programação Orientada a Objetos.
 
