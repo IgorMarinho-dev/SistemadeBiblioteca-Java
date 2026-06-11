@@ -1,2 +1,2 @@
-1;Lebron James;James@email.com;(83)99111-2222;Rua das Flores, 10;2000-05-15
-2;tung tung;tung@email.com;(83)98222-3333;Av. Central, 45;2022-11-30
+1;Lebron James;James@email.com;(83)99111-2222;Rua das Flores, 10;2000-05-15;1
+2;tung tung;tung@email.com;(83)98222-3333;Av. Central, 45;2022-11-30;2

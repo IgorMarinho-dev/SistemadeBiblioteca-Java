@@ -23,19 +23,20 @@ public class ClientesLoader {
 
                 String[] partes = linha.split(";");
 
-                if (partes.length != 6) {
+                if (partes.length != 7) {
                     System.err.println("Linha inválida ignorada: " + linha);
                     continue;
                 }
 
-                int id              = Integer.parseInt(partes[0].trim());
-                String nome         = partes[1].trim();
-                String email        = partes[2].trim();
-                String telefone     = partes[3].trim();
-                String endereco     = partes[4].trim();
+                int id               = Integer.parseInt(partes[0].trim());
+                String nome          = partes[1].trim();
+                String email         = partes[2].trim();
+                String telefone      = partes[3].trim();
+                String endereco      = partes[4].trim();
                 LocalDate nascimento = LocalDate.parse(partes[5].trim());
+                String senha         = partes[6].trim();
 
-                lista.add(new Cliente(id, nome, email, telefone, endereco, nascimento));
+                lista.add(new Cliente(id, nome, email, telefone, endereco, nascimento, senha));
             }
 
         } catch (IOException e) {

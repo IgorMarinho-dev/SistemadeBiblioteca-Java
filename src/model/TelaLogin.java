@@ -33,13 +33,13 @@ public class TelaLogin extends JFrame {
         setSize(400, 420);
         setLocationRelativeTo(null);
 
-        // Painel principal
+
         JPanel painel = new JPanel();
         painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
         painel.setBackground(new Color(18, 24, 38));
         painel.setBorder(new EmptyBorder(40, 50, 40, 50));
 
-        // Título
+
         JLabel titulo = new JLabel("Biblioteca");
         titulo.setFont(new Font("Georgia", Font.BOLD, 28));
         titulo.setForeground(new Color(220, 190, 120));
@@ -79,7 +79,7 @@ public class TelaLogin extends JFrame {
         painelRadio.add(Box.createHorizontalStrut(16));
         painelRadio.add(radioCliente);
 
-        // Botão d entrar
+
         btnEntrar = new JButton("Entrar");
         btnEntrar.setFont(new Font("SansSerif", Font.BOLD, 14));
         btnEntrar.setBackground(new Color(220, 190, 120));
@@ -91,13 +91,13 @@ public class TelaLogin extends JFrame {
         btnEntrar.setAlignmentX(Component.CENTER_ALIGNMENT);
         btnEntrar.addActionListener(e -> realizarLogin());
 
-        // Label erro
+
         labelErro = new JLabel(" ");
         labelErro.setFont(new Font("SansSerif", Font.PLAIN, 12));
         labelErro.setForeground(new Color(220, 80, 80));
         labelErro.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        // Montagem
+
         painel.add(titulo);
         painel.add(Box.createVerticalStrut(4));
         painel.add(subtitulo);
@@ -146,18 +146,20 @@ public class TelaLogin extends JFrame {
                             "Bem-vindo, " + b.getNome() + "!",
                             "Login realizado", JOptionPane.INFORMATION_MESSAGE);
                     labelErro.setText(" ");
-                    // Aqui eu vou botar a futura janela
+                    dispose();
+                    new TelaBibliotecario(b.getNome());
                     return;
                 }
             }
         } else {
             for (Cliente c : clientes) {
-                if (c.getId() == id) {
+                if (c.getId() == id && c.getSenha().equals(senha)) {
                     JOptionPane.showMessageDialog(this,
                             "Bem-vindo, " + c.getNome() + "!",
                             "Login realizado", JOptionPane.INFORMATION_MESSAGE);
                     labelErro.setText(" ");
-                    // Aqui tbm
+                    dispose();
+                    new TelaCliente(c);
                     return;
                 }
             }
