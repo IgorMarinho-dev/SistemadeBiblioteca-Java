@@ -3,43 +3,55 @@ package model;
 public class Livro {
     private int id;
     private String titulo;
-    private Editora editora;
-    private Autor autor;
-    private Categoria categoria;
+    private String editora;
+    private String autor;
+    private String categoria;
 
-    public Livro(int id, String titulo, Editora editora,Autor autor,Categoria categoria) {
+    public Livro(int id, String titulo, String editora, String autor, String categoria) {
         this.id = id;
         this.titulo = titulo;
         this.editora = editora;
         this.autor = autor;
-        this.categoria = categoria;}
+        this.categoria = categoria;
+    }
 
     public int getId() {
-        return id;}
+        return id;
+    }
+
     public void setId(int id) {
-        this.id = id;}
+        this.id = id;
+    }
 
     public String getTitulo() {
-        return titulo;}
+        return titulo;
+    }
 
     public void setTitulo(String titulo) {
-        this.titulo = titulo;}
+        this.titulo = titulo;
+    }
 
+    public String getEditora() {
+        return editora;
+    }
 
-    public Editora getEditora() {
-        return editora;}
+    public void setEditora(String editora) {
+        this.editora = editora;
+    }
 
-    public void setEditora(Editora editora) {
-        this.editora = editora;}
+    public String getAutor() {
+        return autor;
+    }
 
-    public Autor getAutor() {
-        return autor;}
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 
-    public void setAutor(Autor autor) {
-        this.autor = autor;}
+    public String getCategoria() {
+        return categoria;
+    }
 
-    public Categoria getCategoria() {
-        return categoria;}
-
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;}
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+}
